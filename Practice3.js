@@ -24,7 +24,7 @@ console.log ("userNum =",userNum);
 while (userNum != guessingNum) {
     userNum = prompt ("You entered wrong number. Guess again :");
 }
-console.log ("congratulation, you entered the right number");
+console.log ("Congratulations 🎉, you entered the right number ✅");
 
 /*Answer3*/
 //Prompt the user to enter their full name.Generate a username for them based on the input.Start username with @,followed by their full nmae and ending with the fullname length.
