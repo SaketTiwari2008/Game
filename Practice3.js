@@ -17,14 +17,20 @@
 //*Answer2*
 // Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.
 
-let guessingNum = 7;
+const guessingNum = Math.floor(Math.random() * 10)+1; // to get random number form 1-10.
 let userNum = prompt ("Enter Guess the game number (1 to 10) :");
-console.log ("userNum =",userNum); 
+console.log ("userNum = ",userNum); 
+let step = 1;
 
 while (userNum != guessingNum) {
+    if(userNum == 'quit') return;
     userNum = prompt ("You entered wrong number. Guess again :");
+    step++;
 }
-console.log ("congratulation, you entered the right number");
+if(userNum == guessingNum){
+    console.log ("congratulation, you entered the right number");
+    alert(`Congrats you win the game in ${step} steps.`);
+}
 
 /*Answer3*/
 //Prompt the user to enter their full name.Generate a username for them based on the input.Start username with @,followed by their full nmae and ending with the fullname length.
@@ -42,4 +48,5 @@ console.log ("congratulation, you entered the right number");
 // let fullName = prompt ("Enter your fullname without spaces :");
 
 // let userName = "@"+fullName+fullName.length; 
+
 // console.log (userName);
